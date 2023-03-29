@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    background-image: url('../images/pattern-bg-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+
+    position: relative;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+
+form {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+
+    border: none;
+    border-radius: 15px 0 0 15px;
+
+    cursor: pointer;
+}
+
+button {
+    background-color: black;
+    border: none;
+    border-radius: 0 15px 15px 0;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 17%);
+}
+
+button img {
+    padding: 18px;
+}
+
+/* Container Styling */
+.container {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: flex-start;
+
+    padding: 2rem;
+
+    z-index: 1;
+}
+
+.container div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.container div h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(0, 0%, 59%);
+    text-transform: uppercase;
+}
+
+.container div p {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+/* Map Styling */
+main {
+    width: 100%;
+    height: calc(100% - 312px);
+    position: relative;
+
+    z-index: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-bottom: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        background-image: url('../images/pattern-bg-mobile.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .container {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(60%);
+        
+        width: 70%;
+        margin: 0 auto;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+}
